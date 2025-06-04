@@ -18,6 +18,15 @@ const Home = () => {
 
   return (
     <div className='home'>
+
+      <div className="home-navbar">
+        {user?.photo_url && <img src={user.photo_url} alt="User" />}
+        <div className="home-navbar-detalies">
+          <h2>Good day👋</h2>
+          <h1>{user?.first_name} salom</h1>
+        </div>
+      </div>
+
       {user ? (
         <div>
           <h2 className="text-xl font-bold">Salom, {user.first_name}!</h2>
@@ -25,7 +34,6 @@ const Home = () => {
           <p>Username: @{user.username}</p>
           <p>Til: {user.language_code}</p>
           <img src={user.photo_url} alt="" />
-          <h1>rasm qoshildi</h1>
         </div>
       ) : (
         <p>Ma'lumotlar yuklanmoqda yoki foydalanuvchi ma'lum emas...</p>

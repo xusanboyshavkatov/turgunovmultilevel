@@ -2,3 +2,32 @@
     width: 425px;
     /* background-color: red; */
 }
+.home-navbar{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+.home-navbar img{
+    width: 60px;
+    border-radius: 50%;
+}
+.home-navbar-detalies{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.home-navbar-detalies h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #08003B;
+}
+.home-navbar-detalies h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: #8B5CF3;
+}
