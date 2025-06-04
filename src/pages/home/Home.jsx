@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react'
+import { React, useState, useEffect } from 'react'
 import './home.css'
 import Footer from '../../components/footer/Footer'
 
@@ -24,12 +24,13 @@ const Home = () => {
           <p>ID: {user.id}</p>
           <p>Username: @{user.username}</p>
           <p>Til: {user.language_code}</p>
-                    <img src={user.photo_url} alt="" />
+          <img src={user.photo_url} alt="" />
+          <h1>rasm qoshildi</h1>
         </div>
       ) : (
         <p>Ma'lumotlar yuklanmoqda yoki foydalanuvchi ma'lum emas...</p>
       )}
-        <Footer></Footer>
+      <Footer></Footer>
     </div>
   )
 }
