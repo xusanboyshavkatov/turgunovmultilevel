@@ -24,6 +24,7 @@ const Home = () => {
           <p>ID: {user.id}</p>
           <p>Username: @{user.username}</p>
           <p>Til: {user.language_code}</p>
+                    <img src={user.photo_url} alt="" />
         </div>
       ) : (
         <p>Ma'lumotlar yuklanmoqda yoki foydalanuvchi ma'lum emas...</p>
