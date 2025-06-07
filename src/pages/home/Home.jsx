@@ -16,35 +16,35 @@ const Home = ({ footerHeight }) => {
 
     if (tg?.initDataUnsafe?.user) {
       setUser(tg.initDataUnsafe.user);
-      sendProfileData()
+      sendProfileData();
     } else {
       console.log("Telegram WebApp foydalanuvchi ma'lumotlari mavjud emas.");
     }
   }, []);
 
-  coconst sendProfileData = async () => {
-  try {
-    const response = await axios.post(
-      'https://mock.codearch.uz/api/user/profile',
-      {
-        first_name: `${user.first_name}`,
-        last_name: `${user.first_name}`,
-        photo:`${user.photo_url}`,
-        telegram_id: `${user.id}`
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+  const sendProfileData = async () => {
+    try {
+      const response = await axios.post(
+        'https://mock.codearch.uz/api/user/profile',
+        {
+          first_name: `${user.first_name}`,
+          last_name: `${user.first_name}`,
+          photo: `${user.photo_url}`,
+          telegram_id: `${user.id}`
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
         }
-      }
-    );
+      );
 
-    console.log('Success:', response.data);
-  } catch (error) {
-    console.error('Error:', error.response ? error.response.data : error.message);
-  }
-};
+      console.log('Success:', response.data);
+    } catch (error) {
+      console.error('Error:', error.response ? error.response.data : error.message);
+    }
+  };
 
   return (
     <div className='home' style={{ paddingBottom: footerHeight }}>
