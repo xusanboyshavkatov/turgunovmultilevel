@@ -1,5 +1,6 @@
 .home {
     width: 425px;
+    height: auto;
     /* background-color: red; */
     box-sizing: border-box;
     overflow-y: auto;
