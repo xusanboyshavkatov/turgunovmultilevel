@@ -11,27 +11,10 @@ const App = () => {
       setFooterHeight(footerRef.current.offsetHeight);
     }
   }, []);
-
-  const [user, setUser] = useState(null);
-    const [initData, setinitData] = useState()
-  
-    useEffect(() => {
-      const tg = window.Telegram?.WebApp;
-  
-      if (tg?.initDataUnsafe?.user) {
-        setUser(tg.initDataUnsafe.user);
-        setinitData(tg)
-        sendProfileData();
-      } else {
-        console.log("Telegram WebApp foydalanuvchi ma'lumotlari mavjud emas.");
-      }
-    }, []);
-
   return (
     <div className='wrap'>
-      {/* <Home footerHeight={footerHeight}></Home>
-      <Footer innerRef={footerRef}></Footer> */}
-      <pre>{initData ? JSON.stringify(initData, null, 2) : 'Yuklanmoqda...'}</pre>
+      <Home footerHeight={footerHeight}></Home>
+      {/* <Footer innerRef={footerRef}></Footer> */}
     </div>
   )
 }

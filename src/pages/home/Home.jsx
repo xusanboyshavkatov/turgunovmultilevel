@@ -51,22 +51,22 @@ const Home = ({ footerHeight }) => {
   return (
     <div className='home' style={{ paddingBottom: footerHeight }}>
 
-      <div className="home-navbar">
+      {/* <div className="home-navbar">
         {user?.photo_url && <img src={user.photo_url} alt="User" />}
         <div className="home-navbar-detalies">
           <h2>Good day👋</h2>
           <h1>{user?.first_name}</h1>
         </div>
-      </div>
-
+      </div> */}
+{/* 
       <div className="home-search">
         <div className="home-search-bar">
           <FontAwesomeIcon icon={faMagnifyingGlass} className='home-search-icon' />
           <input type="text" placeholder='Search here' />
         </div>
-      </div>
+      </div> */}
 
-      <div className="home-categories">
+      {/* <div className="home-categories">
         <h1>Categories</h1>
         <div className="home-categories-card">
           <div
@@ -94,21 +94,20 @@ const Home = ({ footerHeight }) => {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="home-cards">
+      {/* <div className="home-cards">
         <div className="home-cards-reco-seeall">
           <h1>Recommended</h1>
           <a>See all</a>
         </div>
         <div className="home-cards-items">
-          {/* <Card></Card> */}
-          {/* <Card></Card>
-          <Card></Card> */}
-          <pre>{initData ? JSON.stringify(initData, null, 2) : 'Yuklanmoqda...'}</pre>
+          {<Card></Card> }
+          <Card></Card>
+          <Card></Card>
         </div>
-      </div>
-
+      </div> */}
+          <pre>{initData ? JSON.stringify(initData, null, 2) : 'Yuklanmoqda...'}</pre>
     </div>
   )
 }
