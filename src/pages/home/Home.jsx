@@ -103,6 +103,7 @@ const Home = ({ footerHeight }) => {
           {/* <Card></Card> */}
           {/* <Card></Card>
           <Card></Card> */}
+          <H1>{user}</H1>
         </div>
       </div>
 
