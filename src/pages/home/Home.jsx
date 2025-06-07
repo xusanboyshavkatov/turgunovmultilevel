@@ -103,7 +103,7 @@ const Home = ({ footerHeight }) => {
           {/* <Card></Card> */}
           {/* <Card></Card>
           <Card></Card> */}
-          <h1>{user}</h1>
+          <pre>{user ? JSON.stringify(user, null, 2) : 'Yuklanmoqda...'}</pre>
         </div>
       </div>
 
