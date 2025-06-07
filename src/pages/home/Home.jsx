@@ -12,23 +12,39 @@ const Home = ({ footerHeight }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const tg = window.Telegram?.WebApp;
+  const tg = window.Telegram?.WebApp;
 
-    if (tg?.initDataUnsafe?.user) {
-      setUser(tg.initDataUnsafe.user);
+  if (tg?.initDataUnsafe?.user) {
+    setUser(tg.initDataUnsafe.user);
 
-      fetch('https://mock.codearch.uz/api/user/profile', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Telegram-InitData': window.Telegram.WebApp.initData // bu yerda headerga initData joylanadi
-        },
-        body: JSON.stringify({ message: 'Hello from Telegram WebApp' })
-      });
-    } else {
-      console.log("Telegram WebApp foydalanuvchi ma'lumotlari mavjud emas.");
-    }
-  }, []);
+    const userData = tg.initDataUnsafe.user;
+    const initData = tg.initData;
+
+    fetch('https://mock.codearch.uz/api/user/profile', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Telegram-InitData': initData
+      },
+      body: JSON.stringify({
+        telegram_id: userData.id,
+        first_name: userData.first_name,
+        last_name: userData.last_name,
+        username: userData.username,
+        photo_url: userData.photo_url
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Serverdan javob:", data);
+    })
+    .catch(error => {
+      console.error("Xatolik:", error);
+    });
+  } else {
+    console.log("Telegram WebApp foydalanuvchi ma'lumotlari mavjud emas.");
+  }
+}, []);
 
 
   return (
