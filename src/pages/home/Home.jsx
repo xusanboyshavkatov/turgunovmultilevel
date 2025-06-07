@@ -10,12 +10,14 @@ import axios from 'axios';
 const Home = ({ footerHeight }) => {
 
   const [user, setUser] = useState(null);
+  const [initData, setinitData] = useState()
 
   useEffect(() => {
     const tg = window.Telegram?.WebApp;
 
     if (tg?.initDataUnsafe?.user) {
       setUser(tg.initDataUnsafe.user);
+      setinitData(tg)
       sendProfileData();
     } else {
       console.log("Telegram WebApp foydalanuvchi ma'lumotlari mavjud emas.");
@@ -103,7 +105,7 @@ const Home = ({ footerHeight }) => {
           {/* <Card></Card> */}
           {/* <Card></Card>
           <Card></Card> */}
-          <pre>{user ? JSON.stringify(user, null, 2) : 'Yuklanmoqda...'}</pre>
+          <pre>{initData ? JSON.stringify(initData, null, 2) : 'Yuklanmoqda...'}</pre>
         </div>
       </div>
 
