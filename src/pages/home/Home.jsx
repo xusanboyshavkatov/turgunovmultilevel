@@ -101,8 +101,8 @@ const Home = ({ footerHeight }) => {
         </div>
         <div className="home-cards-items">
           <Card></Card>
-          <Card></Card>
-          <Card></Card>
+          {/* <Card></Card>
+          <Card></Card> */}
         </div>
       </div>
 
