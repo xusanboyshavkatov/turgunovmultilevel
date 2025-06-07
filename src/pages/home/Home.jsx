@@ -100,7 +100,7 @@ const Home = ({ footerHeight }) => {
           <a>See all</a>
         </div>
         <div className="home-cards-items">
-          <Card></Card>
+          {/* <Card></Card> */}
           {/* <Card></Card>
           <Card></Card> */}
         </div>
