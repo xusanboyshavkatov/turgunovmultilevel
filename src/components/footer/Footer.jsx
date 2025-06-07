@@ -3,10 +3,10 @@ import './footer.css'
 import { faFileInvoice, faHouse, faHeart, faPieChart, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Footer = () => {
+const Footer = ({innerRef}) => {
 
     return (
-        <div className="footer">
+        <div className="footer" ref={innerRef}>
             <div className="footer-home-btn">
                 <FontAwesomeIcon icon={faHouse} className='faicon'/>
                 <h3>Home</h3>

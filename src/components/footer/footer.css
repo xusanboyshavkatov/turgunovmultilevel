@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: space-between;
     border-top: 2px solid #97999B;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
 }
 
 .footer-home-btn {
@@ -28,6 +31,7 @@
 }
 
 .footer-home-btn h3 {
+    font-family: 'SF Pro Text', sans-serif;
     font-size: 12px;
     color: #97999B;
     font-weight: 400;

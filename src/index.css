@@ -1,16 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SF-Pro-Text-Regular.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SF-Pro-Text-Bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SF-Pro-Text-Medium.otf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SF-Pro-Text-Semibold.otf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
 }
-.wrap{
+
+.wrap {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;     
+  align-items: center;
   box-sizing: border-box;
   background-color: white;
 }
